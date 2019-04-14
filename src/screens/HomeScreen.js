@@ -7,7 +7,7 @@
  */
 
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
+import {Platform, StyleSheet, Text, View, Button} from 'react-native';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -22,6 +22,12 @@ export default class HomeScreen extends Component<Props> {
     return (
       <View style={styles.container}>
         <Text>HomeScreen</Text>
+         <Button
+              title="Go to Details"
+              onPress={() => {
+                this.props.navigation.navigate({ routeName: 'Details' })
+              }}
+            />
       </View>
     );
   }

@@ -17,7 +17,7 @@ const instructions = Platform.select({
 });
 
 type Props = {};
-export default class SecondScreen extends Component<Props> {
+export default class DetailsScreen extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
