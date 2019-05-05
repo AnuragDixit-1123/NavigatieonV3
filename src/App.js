@@ -1,13 +1,15 @@
 
 import React, {Component} from 'react';
-import Nav from './navigation/Nav'
+import Nav from './navigation/Nav';
+import { Provider } from 'mobx-react';
+import store from './store/Store';
 
-type Props = {};
 export default class App extends Component<Props> {
-
   render() {
     return (
-      <Nav />
-    );
+      <Provider {...store}>
+          <Nav />
+      </Provider>
+      );
   }
 }
